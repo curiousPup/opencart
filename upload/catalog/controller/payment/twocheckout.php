@@ -9,7 +9,7 @@ class ControllerPaymentTwoCheckout extends Controller {
 
 		$data['action'] = 'https://www.2checkout.com/checkout/purchase';
 
-		$data['sid'] = $this->config->get('twocheckout_account');
+		$data['sid'] = $this->config->get('twocheckout_secret');
 		$data['currency_code'] = $order_info['currency_code'];
 		$data['total'] = $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false);
 		$data['cart_order_id'] = $this->session->data['order_id'];
